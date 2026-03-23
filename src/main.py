@@ -23,6 +23,11 @@ while True:
     pTime = cTime
     cv2.putText(img, f'FPS: {int(fps)}', (20, 70), cv2.FONT_HERSHEY_PLAIN, 3, (255,0,0), 2)
 
+    if results.detections:
+        for id, detection in enumerate(results.detections):
+            print(id, detection)
+
+
 
     cv2.imshow("Image", img)
 

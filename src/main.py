@@ -25,9 +25,8 @@ while True:
 
     if results.detections:
         for id, detection in enumerate(results.detections):
-            print(id, detection)
-
-
+            mpDraw.draw_detection(img, detection)
+            #print(id, detection)
 
     cv2.imshow("Image", img)
 
